@@ -1,3 +1,31 @@
 <div id='container'>
   <!-- Your html here -->
+
+    <div class='navigation'>
+    <ul>
+      <li><a href='#/links' class='link'>All Links</a></li>
+      <li><a href='#/shorten' class='shorten'>Shorten</a></li>
+    </ul>
+    </div>
+    <div id='container'></div>
+
+
+    <div class='info'>
+      <span><strong>Titles</strong>
+      <ul>
+        <li class='titles' ng-repeat='item in data.data'>{{ item.title }}
+      </ul>
+      </span>
+      <span><strong>Visits</strong>
+      <ul>
+        <li class='visits' ng-repeat='item in data.data'>{{ item.visits }}
+      </ul>
+      </span>
+    </div>
+
+      <div class='original'>{{url}}</div>
+      <a href='{{base_url}}/{{code}}'>{{base_url}}/{{code}}</a>
+    </div>
+
+
 </div>

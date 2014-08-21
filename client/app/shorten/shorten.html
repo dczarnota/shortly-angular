@@ -1,5 +1,17 @@
 <div id='container'>
 <!-- Your code here -->
+    <div class='navigation'>
+    <ul>
+      <li><a href='#/links' class='link'>All Links</a></li>
+      <li><a href='#/shorten' class='shorten'>Shorten</a></li>
+    </ul>
+    </div>
+
+  <form name="shortenForm" ng-submit='addLink()'>
+    <input name='inputURL' type='text' ng-model="link.url" ng-pattern="reg">
+    <button>Submit URL</button>
+    <div ng-show="shortenForm.inputURL.$invalid" >Please enter a valid URL beginning with "http://"</div>
+  </form>
 
 </div>
 

@@ -1,3 +1,62 @@
 <div id='container'>
   <!-- Your html here -->
+
+    <div class='navigation'>
+    <ul>
+      <li><a href='#/links' class='link'>All Links</a></li>
+      <li><a href='#/shorten' class='shorten'>Shorten</a></li>
+      <li><a href='' class='logout' ng-click='signout()'>Log Out</a></li>
+    </ul>
+    </div>
+    <div id='container'></div>
+
+<!--
+    <div class='info'>
+      <span><strong>Titles</strong>
+      <ul>
+        <li class='titles' ng-repeat='item in data.data'>{{ item.title }}
+      </ul>
+      </span>
+
+      <span><strong>Link</strong>
+      <ul>
+        <li class='shortLink' ng-repeat='item in data.data'><a href='http://localhost:8000/{{item.code}}'> http://localhost:8000/{{ item.code }}</a>
+      </ul>
+      </span>
+
+      <span><strong>Visits</strong>
+      <ul>
+        <li class='visits' ng-repeat='item in data.data'>{{ item.visits }}
+      </ul>
+      </span>
+    </div>
+
+ -->
+    <table>
+      <tr>
+        <th><strong>Site</strong></th>
+
+        <th><strong>URL</strong></th>
+
+        <th><strong>Short Link</strong></th>
+
+        <th><strong>Visits</strong></th>
+      </tr>
+      <tr class="linkRow" ng-repeat='item in data.data'>
+        <td>{{item.title}}</td>
+        <td>{{item.url}} </td>
+        <td> <a href='http://localhost:8000/api/links/{{item.code}}'>http://shortly.com/{{item.code}} </a></td>
+        <td>{{item.visits}}</td>
+      </tr>
+
+
+
+      </table>
+    </div>
+
+
+
+
+
+
 </div>
